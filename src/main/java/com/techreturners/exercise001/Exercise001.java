@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
-        // Add your code here
+        
         return "";
     }
 
