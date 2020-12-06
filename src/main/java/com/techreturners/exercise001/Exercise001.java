@@ -8,22 +8,35 @@ public class Exercise001 {
     }
 
     public String generateInitials(String firstName, String lastName) {
-        // Add your code here
-        return "";
+
+        return Character.toUpperCase(firstName.charAt(0)) + "." + Character.toUpperCase(lastName.charAt(0));
+       // return "";
     }
 
     public double addVat(double originalPrice, double vatRate) {
         // Add your code here
-        return 0.0;
+        return (((vatRate/originalPrice) * 100))+ originalPrice;
+      //  return 0.0;
     }
 
     public String reverse(String sentence) {
         // Add your code here
-        return "";
+        return new StringBuilder(sentence).reverse().toString();
+      //  return "";
     }
+
 
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-        return 0;
+        int osCounter = 0;
+
+        for (int i = 0; i<users.size(); i++) {
+            if (User.getOperatingSystem().equals("Linux"))
+                osCounter++ ;
+        }
+        System.out.println(osCounter);
+        return osCounter;
+
+       // return 0;
     }
 }
