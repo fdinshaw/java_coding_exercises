@@ -15,8 +15,13 @@ public class Exercise001 {
 
     public double addVat(double originalPrice, double vatRate) {
         // Add your code here
-        return (((vatRate/originalPrice) * 100))+ originalPrice;
-      //  return 0.0;
+
+        double addvatnum = Math.round(((vatRate/100) * originalPrice)) + originalPrice;
+        // return addvatnum;
+        static DecimalFormat df = new DecimalFormat("0.00");
+        df.format(input);
+        return DecimalFormat(addvatnum);
+
     }
 
     public String reverse(String sentence) {
@@ -31,12 +36,11 @@ public class Exercise001 {
         int osCounter = 0;
 
         for (int i = 0; i<users.size(); i++) {
-            if (User.getOperatingSystem().equals("Linux"))
+            if (users.get(i).getType().equals("Linux"))
                 osCounter++ ;
         }
         System.out.println(osCounter);
         return osCounter;
 
-       // return 0;
     }
 }
